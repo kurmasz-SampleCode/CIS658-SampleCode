@@ -23,7 +23,7 @@ class Stats
 
   def median
     sorted_values = @values.sort
-    mid = @values.count / 2
+    mid = sorted_values.count / 2
 
     # notice that the if statement takes the value of the
     # last line of the block that is run

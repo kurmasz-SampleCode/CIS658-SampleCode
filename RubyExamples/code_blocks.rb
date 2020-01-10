@@ -8,6 +8,8 @@ def traditional_selection_sort(values)
       # compare objects using any algorithm.
       min_loc = j if values[j] < values[min_loc]
     end
+
+    # swap values[i] and values[min_loc]
     temp = values[i]
     values[i] = values[min_loc]
     values[min_loc] = temp
@@ -29,6 +31,8 @@ def selection_sort(values)
     for j in (i + 1)..(values.count - 1)
       min_loc = j if yield(values[j], values[min_loc])
     end
+
+    # swap values[i] and values[min_loc]
     temp = values[i]
     values[i] = values[min_loc]
     values[min_loc] = temp
